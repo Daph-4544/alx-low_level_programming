@@ -2,19 +2,16 @@
 #include "main.h"
 
 /**
- * prints alphabets in lowercase letters
+ * print_alphabet  - print a - z in alphabetical oreder
+ * followed by a next line
  */
 void print_alphabet(void)
-
 {
-	char alphabets;
+	char ch;
 
-	alphabets = 'a';
-
-	while ( alphabets <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		_putchar(alphabets);
-	        alphabets++;
+		_putchar(ch);
 	}
 	_putchar('\n');
 }
