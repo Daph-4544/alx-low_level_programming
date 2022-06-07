@@ -3,7 +3,7 @@
 /**
  * prints alphabets in lowercase letters
  */
-int main(void)
+void print_alphabet(void)
 
 {
 	char alphabets;
@@ -12,8 +12,8 @@ int main(void)
 
 	while ( alphabets <= 'z')
 	{
-		putchar(alphabets);
+		_putchar(alphabets);
 		alphabets++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
