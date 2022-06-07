@@ -7,17 +7,5 @@
  */
 int _isalpha(int c)
 {
-	char lower_case, upper_case;
-
-	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
-	{
-		for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
-		{
-			if (c == lower_case || c == upper_case)
-			{
-				return (1);
-			}
-		}
-	}
-	return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
