@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,7 +14,7 @@ void print_alphabet(void)
 	while ( alphabets <= 'z')
 	{
 		putchar(alphabets);
-		alphabets++;
+	        alphabets++;
 	}
 	putchar('\n');
 }
