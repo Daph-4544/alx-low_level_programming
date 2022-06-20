@@ -1,40 +1,18 @@
-<<<<<<< HEAD
 #include "main.h"
-
 /**
- *  _memcpy - memset function
- *  @dest: start point of string to change
- *  @src: value that will replace
- *  Return: changed pointer
+ * _strchr - locates a character in a string
+ * @s: string.
+ * @c: character.
+ * Return: the pointer to the first occurance of the character c
  */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_task istrchr(char *s, char c)
 {
-	char *dest1 = dest;
-	char *src1 = src;
+	unsigned int i = 0;
 
-	for (; n != 0; dest1++, n--, src1++)
-		*dest1 = *src1;
-	return (dest);
+	for (; *(s + i) != '\0'; i++)
+		if (*(s + i) == c)
+			return (s + i);
+	if (*(s + i) == c)
+		return (s + i);
+	return ('\0');
 }
-=======
-#include "main.h"
-
-/**
- * _memcpy - memset function
- * @dest: start point of string to change
- * @src: value that will replace
- * @n: number of bytes to change
- * Return: changed pointer
- */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	char *dest1 = dest;
-	char *src1 = src;
-
-	for (; n != 0; dest1++, n--, src1++)
-		*dest1 = *src1;
-	return (dest);
-}
->>>>>>> 4e5f773f96fdc84efd2669f55c3892404e5d5735
