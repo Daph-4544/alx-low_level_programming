@@ -2,8 +2,8 @@
 
 /**
  * _memcpy - memset function
- * @dest: start point of string to change
- * @src: value that will replace
+ * @dest: start point of string to change@
+ * src: value that will replace
  * @n: number of bytes to change
  * Return: changed pointer
  */
