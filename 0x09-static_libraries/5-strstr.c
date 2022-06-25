@@ -6,8 +6,8 @@
  * @haystack: entire string.
  * @needle: substring.
  * Return: pointer to the beginning of located substring or
- * NULL if the substring is not found.
-*/
+ * Null if the substring is not found.
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	char *bhaystack;
@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			pneedle++;
 		}
-		if (!*pneedle)
+		if  (!*pneedle)
 			return (bhaystack);
 		haystack = bhaystack + 1;
 	}
