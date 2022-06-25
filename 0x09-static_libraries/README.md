@@ -1,1 +1,1 @@
-first commit for static libraries project
+Readme for static libraries
