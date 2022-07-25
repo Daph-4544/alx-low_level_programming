@@ -1,45 +1,38 @@
 #include "main.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 
 /**
- * _strlen - finds the length of a string
- * @str: pointer to the string
- *
- * Return: length of the string
- */
-size_t _strlen(char *str)
-{
-	size_t i;
-
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
-}
-
-/**
- * append_text_to_file - appends a text at the end of a file.
- * @filename: name of the file
- * @text_content: NULL terminated string to add at the end of the file
+ * append_text_to_file - appends text at the end of a file
+ * @filename: file to append the text to
+ * @text_content: content to append into the file
  *
  * Return: 1 on success and -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t len;
+	int fd, t, s = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
+
 	fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
+	if (fd < 0)
 		return (-1);
-	if (text_content != NULL)
-		len = write(fd, text_content, _strlen(text_content));
+
+	if (text_content)
+	{
+		while (text_content[s])
+			s++;
+		t = write(fd, text_content, s);
+		if (t != s)
+			return (-1);
+	}
+
 	close(fd);
-	if (len == -1)
-		return (-1);
+
 	return (1);
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
